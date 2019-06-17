@@ -1,0 +1,24 @@
+package com.bridgelabz.note.service;
+
+import java.util.List;
+
+import com.bridgelabz.note.dto.LabelDto;
+import com.bridgelabz.note.model.Label;
+import com.bridgelabz.response.Response;
+
+public interface ILabelService {
+	
+	public Response createLabel(String token,LabelDto labelDto);
+	
+	public Response updateLabel(String token , long labelId , LabelDto labelDto);
+	
+	public List<Label> getLabel(String token);
+	
+	public Response deleteLabel(String token , long labelId);
+	
+	public Response addLabelToNote(String token , long labelId , long noteId);
+	
+	public Response removeLabelFromNote(String token , long labelId , long noteId);
+	
+	public List<Label> getLabelOfNote(String token, long noteId);
+}

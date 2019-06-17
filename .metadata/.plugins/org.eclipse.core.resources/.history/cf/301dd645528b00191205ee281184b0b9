@@ -1,0 +1,14 @@
+package com.bridgelabz.util;
+
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+
+@Component
+public class CronHelper {
+	
+	//@Scheduled(fixedRate = 1000)
+	public void cronRunner() {
+		System.out.println("I am schedular");
+	}
+	
+}

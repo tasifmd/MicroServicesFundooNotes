@@ -1,0 +1,30 @@
+package com.bridgelabz.util;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+
+import com.bridgelabz.note.model.Note;
+import com.bridgelabz.note.repository.NoteRepository;
+
+@Component
+public class CronHelper {
+	
+	@Autowired
+	private NoteRepository noteRepository;
+	
+	@Scheduled(fixedRate = 1000)
+	public void cronRunner() {
+		System.out.println("I am schedular");
+		List<Note> notes = noteRepository.findAll();
+		for(Note note : notes) {
+			
+		}
+		
+	}
+	
+}

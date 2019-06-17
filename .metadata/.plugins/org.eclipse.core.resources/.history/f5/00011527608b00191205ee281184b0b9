@@ -1,0 +1,30 @@
+package com.bridgelabz.note.service;
+
+import java.util.List;
+
+import com.bridgelabz.note.dto.CreateDto;
+import com.bridgelabz.note.dto.UpdateDto;
+import com.bridgelabz.note.model.Note;
+import com.bridgelabz.response.Response;
+
+public interface INoteService {
+	
+	public Response createNote(CreateDto createDto , long userId);
+	
+	public Response updateNote(UpdateDto updateDto,long userId,long noteId);
+	
+	public Response deleteNote(long userId , long noteId);
+	
+	public List<Note> getAllNote(long userId , boolean isPin , boolean isTrash , boolean isArchive);
+	
+	public Response pinAndUnPin(String token , long noteId);
+	
+	public Response trashAndUntrash(String token ,long noteId);
+	
+	public Response archiveAndUnarchive(String token , long noteId);
+	
+	public Response addReminder(String token, long noteId, String time);
+	
+	public Response removeReminder(String token, long noteId);
+	
+}

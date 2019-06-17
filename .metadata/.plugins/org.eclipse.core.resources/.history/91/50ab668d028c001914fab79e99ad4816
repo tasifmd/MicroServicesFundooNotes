@@ -1,0 +1,8 @@
+package com.bridgelabz.redis.model;
+
+import org.springframework.data.redis.core.RedisHash;
+
+@RedisHash("note")
+public class Note {
+
+}

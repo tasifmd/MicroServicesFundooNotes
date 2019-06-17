@@ -1,0 +1,5 @@
+package com.bridgelabz.redis.model;
+
+public class Note {
+
+}
