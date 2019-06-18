@@ -45,7 +45,8 @@ public interface INoteService {
 	 * @return
 	 */
 	public List<Note> getAllNote(long userId, boolean isPin, boolean isTrash, boolean isArchive);
-
+	
+	
 	/**
 	 * Purpose : Function to pin or unpin notes 
 	 * @param userId
@@ -86,5 +87,7 @@ public interface INoteService {
 	 * @return
 	 */
 	public Response removeReminder(long userId, long noteId);
+
+	
 
 }

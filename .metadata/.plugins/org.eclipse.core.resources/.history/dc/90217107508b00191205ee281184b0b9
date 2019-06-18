@@ -1,7 +1,0 @@
-package com.bridgelabz.config;
-
-import org.springframework.web.servlet.HandlerInterceptor;
-
-public class InterceptorConfig implements HandlerInterceptor  {
-
-}
