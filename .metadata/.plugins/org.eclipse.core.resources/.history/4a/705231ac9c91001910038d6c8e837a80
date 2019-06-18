@@ -21,5 +21,5 @@ zuul.routes.userservice.path=/user/**
 zuul.routes.userservice.serviceId=userservice
 zuul.routes.noteservice.path=/note/**
 zuul.routes.noteservice.serviceId=noteservice
-zuul.routes.labelservice.path=/label/**
-zuul.routes.labelservice.serviceId=noteservice
+zuul.routes.labelervice.path=/label/**
+zuul.routes.labelervice.serviceId=noteservice
