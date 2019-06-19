@@ -1,5 +1,0 @@
-package com.bridgelabz.redis.repository;
-
-public interface NoteRadisRepository {
-
-}

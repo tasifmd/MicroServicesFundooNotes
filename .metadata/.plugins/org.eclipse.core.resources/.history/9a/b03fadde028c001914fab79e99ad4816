@@ -1,9 +1,0 @@
-package com.bridgelabz.redis.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.bridgelabz.redis.model.Note;
-
-public interface NoteRadisRepository extends JpaRepository<Note, Long>{
-
-}

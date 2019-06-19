@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.bridgelabz.exception.NoteException;
 import com.bridgelabz.note.dto.CreateDto;
@@ -47,6 +48,7 @@ public class NoteServiceImpl implements INoteService {
 	 * @see com.bridgelabz.note.service.INoteService#createNote(com.bridgelabz.note.dto.CreateDto, long)
 	 */
 	@Override
+	@Transactional
 	public Response createNote(CreateDto createDto, long userId) {
 		System.out.println("Inside create service");
 		if (createDto.getTitle().isEmpty() && createDto.getDescription().isEmpty()) {
@@ -68,6 +70,7 @@ public class NoteServiceImpl implements INoteService {
 	 * @see com.bridgelabz.note.service.INoteService#updateNote(com.bridgelabz.note.dto.UpdateDto, long, long)
 	 */
 	@Override
+	@Transactional
 	public Response updateNote(UpdateDto updateDto, long userId, long noteId) {
 		Optional<Note> note = noteRepository.findByNoteIdAndUserId(noteId, userId);
 		if (!note.isPresent()) {
@@ -93,6 +96,7 @@ public class NoteServiceImpl implements INoteService {
 	 * @see com.bridgelabz.note.service.INoteService#deleteNote(long, long)
 	 */
 	@Override
+	@Transactional
 	public Response deleteNote(long userId, long noteId) {
 		Optional<Note> note = noteRepository.findByNoteIdAndUserId(noteId, userId);
 		if (!note.isPresent()) {
@@ -141,6 +145,7 @@ public class NoteServiceImpl implements INoteService {
 	 * @see com.bridgelabz.note.service.INoteService#pinAndUnPin(long, long)
 	 */
 	@Override
+	@Transactional
 	public Response pinAndUnPin(long userId, long noteId) {
 		Optional<Note> note = noteRepository.findByNoteIdAndUserId(noteId, userId);
 		if (!note.isPresent()) {
@@ -168,6 +173,7 @@ public class NoteServiceImpl implements INoteService {
 	 * @see com.bridgelabz.note.service.INoteService#trashAndUntrash(long, long)
 	 */
 	@Override
+	@Transactional
 	public Response trashAndUntrash(long userId, long noteId) {
 		Optional<Note> note = noteRepository.findByNoteIdAndUserId(noteId, userId);
 		if (!note.isPresent()) {
@@ -195,6 +201,7 @@ public class NoteServiceImpl implements INoteService {
 	 * @see com.bridgelabz.note.service.INoteService#archiveAndUnarchive(long, long)
 	 */
 	@Override
+	@Transactional
 	public Response archiveAndUnarchive(long userId, long noteId) {
 		Optional<Note> note = noteRepository.findByNoteIdAndUserId(noteId, userId);
 		if (!note.isPresent()) {
@@ -222,6 +229,7 @@ public class NoteServiceImpl implements INoteService {
 	 * @see com.bridgelabz.note.service.INoteService#addReminder(long, long, java.lang.String)
 	 */
 	@Override
+	@Transactional
 	public Response addReminder(long userId, long noteId, String time) {
 		Optional<Note> note = noteRepository.findByNoteIdAndUserId(noteId, userId);
 		if (!note.isPresent()) {
@@ -240,6 +248,7 @@ public class NoteServiceImpl implements INoteService {
 	 * @see com.bridgelabz.note.service.INoteService#removeReminder(long, long)
 	 */
 	@Override
+	@Transactional
 	public Response removeReminder(long userId, long noteId) {
 		Optional<Note> note = noteRepository.findByNoteIdAndUserId(noteId, userId);
 		if (!note.isPresent()) {

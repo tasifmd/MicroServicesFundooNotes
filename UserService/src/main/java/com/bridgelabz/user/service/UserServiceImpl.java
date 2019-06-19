@@ -12,6 +12,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.bridgelabz.exception.UserException;
 import com.bridgelabz.response.LoginResponse;
@@ -66,6 +67,7 @@ public class UserServiceImpl implements IUserService {
 	 * @see com.bridgelabz.user.service.IUserService#register(com.bridgelabz.user.dto.RegisterDto)
 	 */
 	@Override
+	@Transactional
 	public Response register(RegisterDto registerDto) {
 		Email email = new Email();	
 		Response response = new Response();
@@ -92,6 +94,7 @@ public class UserServiceImpl implements IUserService {
 	 * @see com.bridgelabz.user.service.IUserService#validateEmail(java.lang.String)
 	 */
 	@Override
+	@Transactional
 	public Response validateEmail(String token) {
 		Response response = new Response();
 		long userId = jwtTokenHelper.decodeToken(token);
@@ -140,7 +143,7 @@ public class UserServiceImpl implements IUserService {
 			throw new UserException(environment.getProperty("userExceptionMessage"), Integer.parseInt(environment.getProperty("userExceptionCode")));
 		}
 		String token = jwtTokenHelper.generateToken(userAvailability.get().getUserId());
-		String  emailBody ="http://192.168.0.198:8081/user/reset/"+token;
+		String  emailBody ="http://localhost:8081/user/reset/"+token;
 		email.setBody(emailBody);
 		email.setSubject("Forgot Password");
 		email.setTo(forgotDto.getUserEmail());
@@ -154,6 +157,7 @@ public class UserServiceImpl implements IUserService {
 	 * @see com.bridgelabz.user.service.IUserService#resetPassword(com.bridgelabz.user.dto.ResetDto, java.lang.String)
 	 */
 	@Override
+	@Transactional
 	public Response resetPassword(ResetDto resetDto,String token) {
 		Response response = new Response();
 		long userId = jwtTokenHelper.decodeToken(token);
@@ -170,7 +174,5 @@ public class UserServiceImpl implements IUserService {
 		response = StatusHelper.statusInfo(environment.getProperty("resetPassword"), Integer.parseInt(environment.getProperty("successCode")));
 		return response;
 	}
-
-	
 
 }
