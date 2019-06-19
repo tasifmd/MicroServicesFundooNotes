@@ -135,7 +135,7 @@ public class NoteServiceImpl implements INoteService {
 		for (Note note : listNote) {
 			if (note.isPin() == isPin && note.isTrash() == isTrash && note.isArchive() == isArchive) {
 				notes.add(note);
-				redisService.putMap("note", note.getNoteId(), note);
+				// redisService.putMap("note", note.getNoteId(), note);
 			}
 		}
 		return notes;
