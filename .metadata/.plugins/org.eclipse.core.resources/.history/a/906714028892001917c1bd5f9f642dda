@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.bridgelabz.exception.LabelException;
 import com.bridgelabz.exception.NoteException;
@@ -41,7 +40,6 @@ public class LabelServiceImpl implements ILabelService {
 	/* (non-Javadoc)
 	 * @see com.bridgelabz.note.service.ILabelService#createLabel(long, com.bridgelabz.note.dto.LabelDto)
 	 */
-	@Transactional
 	@Override
 	public Response createLabel(long userId, LabelDto labelDto) {
 		Label label = modelMapper.map(labelDto, Label.class);
@@ -57,7 +55,6 @@ public class LabelServiceImpl implements ILabelService {
 	 * @see com.bridgelabz.note.service.ILabelService#updateLabel(long, long, com.bridgelabz.note.dto.LabelDto)
 	 */
 	@Override
-	@Transactional
 	public Response updateLabel(long userId, long labelId, LabelDto labelDto) {
 		Optional<Label> label = labelRepository.findByUserIdAndLabelId(userId, labelId);
 		if (!label.isPresent()) {
@@ -79,7 +76,6 @@ public class LabelServiceImpl implements ILabelService {
 	}
 
 	@Override
-	@Transactional
 	public Response deleteLabel(long userId, long labelId) {
 		Optional<Label> label = labelRepository.findByUserIdAndLabelId(userId, labelId);
 		if (!label.isPresent()) {
@@ -93,7 +89,6 @@ public class LabelServiceImpl implements ILabelService {
 	}
 
 	@Override
-	@Transactional
 	public Response addLabelToNote(long userId, long labelId, long noteId) {
 		Optional<Note> note = noteRepository.findByNoteIdAndUserId(noteId, userId);
 		if (!note.isPresent()) {
@@ -121,7 +116,6 @@ public class LabelServiceImpl implements ILabelService {
 	}
 
 	@Override
-	@Transactional
 	public Response removeLabelFromNote(long userId, long labelId, long noteId) {
 		Optional<Note> note = noteRepository.findByNoteIdAndUserId(noteId, userId);
 		if (!note.isPresent()) {

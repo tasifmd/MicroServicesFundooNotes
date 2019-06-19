@@ -121,7 +121,6 @@ public class LabelServiceImpl implements ILabelService {
 	}
 
 	@Override
-	@Transactional
 	public Response removeLabelFromNote(long userId, long labelId, long noteId) {
 		Optional<Note> note = noteRepository.findByNoteIdAndUserId(noteId, userId);
 		if (!note.isPresent()) {
