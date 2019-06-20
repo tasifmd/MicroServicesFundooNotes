@@ -37,7 +37,7 @@ import com.bridgelabz.util.StatusHelper;
 @PropertySource("classpath:message.properties")
 public class UserServiceImpl implements IUserService {
 
-	private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
+	private Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 	
 	@Autowired
 	private PasswordEncoder passwordEncoder;
@@ -74,6 +74,7 @@ public class UserServiceImpl implements IUserService {
 		logger.info((registerDto.toString()));
 		Optional<User> userAvailability = userRepository.findByUserEmail(registerDto.getUserEmail());
 		if(userAvailability.isPresent()) {
+			logger.error("User already exist {}",userAvailability.get());
 			throw new UserException(environment.getProperty("userExceptionMessage"), Integer.parseInt(environment.getProperty("userExceptionCode")));
 		}
 		registerDto.setPassword(passwordEncoder.encode(registerDto.getPassword()));
@@ -86,6 +87,7 @@ public class UserServiceImpl implements IUserService {
 		email.setSubject("Email validation");
 		email.setFrom("${EmailId}");
 		producer.send(email);
+		logger.info("User registered successfully {}", user);
 		response = StatusHelper.statusInfo(environment.getProperty("registerSuccess"), Integer.parseInt(environment.getProperty("successCode")));
 		return response;
 	}
@@ -102,6 +104,7 @@ public class UserServiceImpl implements IUserService {
 		user.get().setVarified(true);
 		user.get().setUpdatedDate(LocalDate.now());
 		userRepository.save(user.get());
+		logger.info("User id is successfully verified {}", user.get());
 		response = StatusHelper.statusInfo(environment.getProperty("emailVarification"), Integer.parseInt(environment.getProperty("successCode")));
 		return response;
 	}
@@ -114,10 +117,12 @@ public class UserServiceImpl implements IUserService {
 		LoginResponse loginResponse  = new LoginResponse();
 		Optional<User> userAvailability = userRepository.findByUserEmail(loginDto.getUserEmail());
 		if(!userAvailability.isPresent()) {
+			logger.error("User does not exist {}", userAvailability.get());
 			throw new UserException(environment.getProperty("userExceptionMessage"), Integer.parseInt(environment.getProperty("userExceptionCode")));
 		}
 		
 		if(userAvailability.get().isVarified() != true) {
+			logger.error("User id is not verified {}", userAvailability.get());
 			throw new UserException(environment.getProperty("emailNotVerified"), Integer.parseInt(environment.getProperty("userExceptionCode")));
 		}
 		
@@ -125,6 +130,7 @@ public class UserServiceImpl implements IUserService {
 			String token = jwtTokenHelper.generateToken(userAvailability.get().getUserId());
 			String userName = userAvailability.get().getUserName();
 			String email = userAvailability.get().getUserEmail();
+			logger.info("User successfully logged in {}", userAvailability.get());
 			loginResponse = StatusHelper.statusResponseInfo(environment.getProperty("loginSucces"), Integer.parseInt(environment.getProperty("successCode")), token, userName, email);
 			return loginResponse;
 		}
@@ -140,6 +146,7 @@ public class UserServiceImpl implements IUserService {
 		Email email = new Email();	
 		Optional<User> userAvailability = userRepository.findByUserEmail(forgotDto.getUserEmail());
 		if(!userAvailability.isPresent()) {
+			logger.error("User does not exist {}", userAvailability.get());
 			throw new UserException(environment.getProperty("userExceptionMessage"), Integer.parseInt(environment.getProperty("userExceptionCode")));
 		}
 		String token = jwtTokenHelper.generateToken(userAvailability.get().getUserId());
@@ -149,6 +156,7 @@ public class UserServiceImpl implements IUserService {
 		email.setTo(forgotDto.getUserEmail());
 		email.setFrom("${EmailId}");
 		producer.send(email);
+		logger.info("Link for forgot password has been sent {}", userAvailability.get());
 		response = StatusHelper.statusInfo(environment.getProperty("forgotPassword"), Integer.parseInt(environment.getProperty("successCode")));
 		return response;
 	}
@@ -163,14 +171,17 @@ public class UserServiceImpl implements IUserService {
 		long userId = jwtTokenHelper.decodeToken(token);
 		Optional<User> userAvailability = userRepository.findById(userId);
 		if(!userAvailability.isPresent()) {
+			logger.error("User does not exist {}", userAvailability.get());
 			throw new UserException(environment.getProperty("userExceptionMessage"), Integer.parseInt(environment.getProperty("userExceptionCode")));
 		}
 		if(!resetDto.getNewPassword().equals(resetDto.getConformPassword())) {
+			logger.error("Password doesn't match {}", userAvailability.get());
 			throw new UserException(environment.getProperty("passwordError"), Integer.parseInt(environment.getProperty("userExceptionCode")));
 		}
 		userAvailability.get().setPassword(passwordEncoder.encode(resetDto.getConformPassword()));
 		userAvailability.get().setUpdatedDate(LocalDate.now());
 		userRepository.save(userAvailability.get());
+		logger.info("Password reset successfully {}", userAvailability.get());
 		response = StatusHelper.statusInfo(environment.getProperty("resetPassword"), Integer.parseInt(environment.getProperty("successCode")));
 		return response;
 	}

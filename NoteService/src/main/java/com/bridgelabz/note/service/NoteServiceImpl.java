@@ -7,6 +7,8 @@ import java.util.Map;
 import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
@@ -24,6 +26,7 @@ import com.bridgelabz.util.StatusHelper;
 
 /**
  * Purpose : Implementation class for note
+ * 
  * @author Tasif Mohammed
  *
  */
@@ -31,6 +34,8 @@ import com.bridgelabz.util.StatusHelper;
 @PropertySource("classpath:error.properties")
 @Service("noteService")
 public class NoteServiceImpl implements INoteService {
+
+	private Logger logger = LoggerFactory.getLogger(NoteServiceImpl.class);
 
 	@Autowired
 	Environment environment;
@@ -44,14 +49,19 @@ public class NoteServiceImpl implements INoteService {
 	@Autowired
 	private RedisService<Note> redisService;
 
-	/* (non-Javadoc)
-	 * @see com.bridgelabz.note.service.INoteService#createNote(com.bridgelabz.note.dto.CreateDto, long)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * com.bridgelabz.note.service.INoteService#createNote(com.bridgelabz.note.dto.
+	 * CreateDto, long)
 	 */
 	@Override
 	@Transactional
 	public Response createNote(CreateDto createDto, long userId) {
 		System.out.println("Inside create service");
 		if (createDto.getTitle().isEmpty() && createDto.getDescription().isEmpty()) {
+			logger.error("Note does not have any title or description ");
 			throw new NoteException(environment.getProperty("noteemptyfield"),
 					Integer.parseInt(environment.getProperty("noteExceptionCode")));
 		}
@@ -61,23 +71,30 @@ public class NoteServiceImpl implements INoteService {
 		note.setCreated(LocalDate.now());
 		redisService.putMap("note", note.getNoteId(), note);
 		noteRepository.save(note);
+		logger.info("Note has successfully been created {}", note);
 		Response response = StatusHelper.statusInfo(environment.getProperty("noteCreated"),
 				Integer.parseInt(environment.getProperty("successCode")));
 		return response;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.bridgelabz.note.service.INoteService#updateNote(com.bridgelabz.note.dto.UpdateDto, long, long)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * com.bridgelabz.note.service.INoteService#updateNote(com.bridgelabz.note.dto.
+	 * UpdateDto, long, long)
 	 */
 	@Override
 	@Transactional
 	public Response updateNote(UpdateDto updateDto, long userId, long noteId) {
 		Optional<Note> note = noteRepository.findByNoteIdAndUserId(noteId, userId);
 		if (!note.isPresent()) {
+			logger.error("Note does not exist {}", note.get());
 			throw new NoteException(environment.getProperty("notNotAvailable"),
 					Integer.parseInt(environment.getProperty("noteExceptionCode")));
 		}
 		if (updateDto.getTitle().isEmpty() && updateDto.getDescription().isEmpty()) {
+			logger.error("Note does note have title and description {}", note.get());
 			throw new NoteException(environment.getProperty("noteemptyfield"),
 					Integer.parseInt(environment.getProperty("noteExceptionCode")));
 		}
@@ -87,12 +104,15 @@ public class NoteServiceImpl implements INoteService {
 		note.get().setModified(LocalDate.now());
 		redisService.putMap("note", noteId, note.get());
 		noteRepository.save(note.get());
+		logger.info("Note has successfully been updated {}", note.get());
 		Response response = StatusHelper.statusInfo(environment.getProperty("noteUpdated"),
 				Integer.parseInt(environment.getProperty("successCode")));
 		return response;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see com.bridgelabz.note.service.INoteService#deleteNote(long, long)
 	 */
 	@Override
@@ -100,16 +120,19 @@ public class NoteServiceImpl implements INoteService {
 	public Response deleteNote(long userId, long noteId) {
 		Optional<Note> note = noteRepository.findByNoteIdAndUserId(noteId, userId);
 		if (!note.isPresent()) {
+			logger.error("Note does not exist ");
 			throw new NoteException(environment.getProperty("notNotAvailable"),
 					Integer.parseInt(environment.getProperty("noteExceptionCode")));
 		}
 		if (note.get().isTrash() == true) {
 			noteRepository.delete(note.get());
 			redisService.deleteMap("note", noteId);
+			logger.info("Note deleted successfully {}", note);
 			Response response = StatusHelper.statusInfo(environment.getProperty("noteDeleted"),
 					Integer.parseInt(environment.getProperty("successCode")));
 			return response;
 		} else {
+			logger.error("Note is not in trash {}",note.get());
 			Response response = StatusHelper.statusInfo(environment.getProperty("noteNotDeleted"),
 					Integer.parseInt(environment.getProperty("successCode")));
 			return response;
@@ -125,8 +148,11 @@ public class NoteServiceImpl implements INoteService {
 		return note;
 	}
 
-	/* (non-Javadoc)
-	 * @see com.bridgelabz.note.service.INoteService#getAllNote(long, boolean, boolean, boolean)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.bridgelabz.note.service.INoteService#getAllNote(long, boolean,
+	 * boolean, boolean)
 	 */
 	@Override
 	public List<Note> getAllNote(long userId, boolean isPin, boolean isTrash, boolean isArchive) {
@@ -138,10 +164,13 @@ public class NoteServiceImpl implements INoteService {
 				redisService.putMap("note", note.getNoteId(), note);
 			}
 		}
+		logger.info("Getting notes {}", notes);
 		return notes;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see com.bridgelabz.note.service.INoteService#pinAndUnPin(long, long)
 	 */
 	@Override
@@ -149,6 +178,7 @@ public class NoteServiceImpl implements INoteService {
 	public Response pinAndUnPin(long userId, long noteId) {
 		Optional<Note> note = noteRepository.findByNoteIdAndUserId(noteId, userId);
 		if (!note.isPresent()) {
+			logger.error("Note is not available {}", note.get());
 			throw new NoteException(environment.getProperty("notNotAvailable"),
 					Integer.parseInt(environment.getProperty("noteExceptionCode")));
 		}
@@ -156,6 +186,7 @@ public class NoteServiceImpl implements INoteService {
 			note.get().setPin(true);
 			note.get().setModified(LocalDate.now());
 			noteRepository.save(note.get());
+			logger.info("Note pinned successfully {}" + note.get());
 			Response response = StatusHelper.statusInfo(environment.getProperty("notepinned"),
 					Integer.parseInt(environment.getProperty("successCode")));
 			return response;
@@ -163,13 +194,16 @@ public class NoteServiceImpl implements INoteService {
 			note.get().setPin(false);
 			note.get().setModified(LocalDate.now());
 			noteRepository.save(note.get());
+			logger.info("Note unpinned successfully {}" + note.get());
 			Response response = StatusHelper.statusInfo(environment.getProperty("noteunpinned"),
 					Integer.parseInt(environment.getProperty("successCode")));
 			return response;
 		}
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see com.bridgelabz.note.service.INoteService#trashAndUntrash(long, long)
 	 */
 	@Override
@@ -177,6 +211,7 @@ public class NoteServiceImpl implements INoteService {
 	public Response trashAndUntrash(long userId, long noteId) {
 		Optional<Note> note = noteRepository.findByNoteIdAndUserId(noteId, userId);
 		if (!note.isPresent()) {
+			logger.error("Note is not available {}", note.get());
 			throw new NoteException(environment.getProperty("notNotAvailable"),
 					Integer.parseInt(environment.getProperty("noteExceptionCode")));
 		}
@@ -184,6 +219,7 @@ public class NoteServiceImpl implements INoteService {
 			note.get().setTrash(true);
 			note.get().setModified(LocalDate.now());
 			noteRepository.save(note.get());
+			logger.info("Note trshed successfully {}" , note.get());
 			Response response = StatusHelper.statusInfo(environment.getProperty("noteTrashed"),
 					Integer.parseInt(environment.getProperty("successCode")));
 			return response;
@@ -191,13 +227,16 @@ public class NoteServiceImpl implements INoteService {
 			note.get().setTrash(false);
 			note.get().setModified(LocalDate.now());
 			noteRepository.save(note.get());
+			logger.info("Note trshed successfully {}" , note.get());
 			Response response = StatusHelper.statusInfo(environment.getProperty("noteUntrashed"),
 					Integer.parseInt(environment.getProperty("successCode")));
 			return response;
 		}
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see com.bridgelabz.note.service.INoteService#archiveAndUnarchive(long, long)
 	 */
 	@Override
@@ -205,6 +244,7 @@ public class NoteServiceImpl implements INoteService {
 	public Response archiveAndUnarchive(long userId, long noteId) {
 		Optional<Note> note = noteRepository.findByNoteIdAndUserId(noteId, userId);
 		if (!note.isPresent()) {
+			logger.error("Note is not available {}", note.get());
 			throw new NoteException(environment.getProperty("notNotAvailable"),
 					Integer.parseInt(environment.getProperty("noteExceptionCode")));
 		}
@@ -212,6 +252,7 @@ public class NoteServiceImpl implements INoteService {
 			note.get().setArchive(true);
 			note.get().setModified(LocalDate.now());
 			noteRepository.save(note.get());
+			logger.info("Note archieved successfully {}", note.get());
 			Response response = StatusHelper.statusInfo(environment.getProperty("noteArchived"),
 					Integer.parseInt(environment.getProperty("successCode")));
 			return response;
@@ -219,32 +260,40 @@ public class NoteServiceImpl implements INoteService {
 			note.get().setArchive(false);
 			note.get().setModified(LocalDate.now());
 			noteRepository.save(note.get());
+			logger.info("Note unarchieved successfully {}", note.get());
 			Response response = StatusHelper.statusInfo(environment.getProperty("noteUnarchived"),
 					Integer.parseInt(environment.getProperty("successCode")));
 			return response;
 		}
 	}
 
-	/* (non-Javadoc)
-	 * @see com.bridgelabz.note.service.INoteService#addReminder(long, long, java.lang.String)
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see com.bridgelabz.note.service.INoteService#addReminder(long, long,
+	 * java.lang.String)
 	 */
 	@Override
 	@Transactional
 	public Response addReminder(long userId, long noteId, String time) {
 		Optional<Note> note = noteRepository.findByNoteIdAndUserId(noteId, userId);
 		if (!note.isPresent()) {
+			logger.error("Note is not available {}", note.get());
 			throw new NoteException(environment.getProperty("notNotAvailable"),
 					Integer.parseInt(environment.getProperty("noteExceptionCode")));
 		}
 		note.get().setReminder(time);
 		note.get().setModified(LocalDate.now());
 		noteRepository.save(note.get());
+		logger.info("Reminder has successfully been added to the note {}", note.get());
 		Response response = StatusHelper.statusInfo(environment.getProperty("reminderSetted"),
 				Integer.parseInt(environment.getProperty("successCode")));
 		return response;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see com.bridgelabz.note.service.INoteService#removeReminder(long, long)
 	 */
 	@Override
@@ -252,12 +301,14 @@ public class NoteServiceImpl implements INoteService {
 	public Response removeReminder(long userId, long noteId) {
 		Optional<Note> note = noteRepository.findByNoteIdAndUserId(noteId, userId);
 		if (!note.isPresent()) {
+			logger.error("Note is not available {}", note.get());
 			throw new NoteException(environment.getProperty("notNotAvailable"),
 					Integer.parseInt(environment.getProperty("noteExceptionCode")));
 		}
 		note.get().setReminder(null);
 		note.get().setModified(LocalDate.now());
 		noteRepository.save(note.get());
+		logger.info("Reminder has successfully been removed {}", note.get());
 		Response response = StatusHelper.statusInfo(environment.getProperty("reminderRemoved"),
 				Integer.parseInt(environment.getProperty("successCode")));
 		return response;

@@ -1,0 +1,832 @@
+2019-06-20 15:34:03.738  INFO 5764 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : No active profile set, falling back to default profiles: default
+2019-06-20 15:34:04.091  INFO 5764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:34:04.091  INFO 5764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:34:04.099  INFO 5764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 2 repository interfaces.
+2019-06-20 15:34:04.101  INFO 5764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:34:04.101  INFO 5764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:34:04.103  INFO 5764 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.LabelRepository.
+2019-06-20 15:34:04.103  INFO 5764 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.NoteRepository.
+2019-06-20 15:34:04.103  INFO 5764 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 repository interfaces.
+2019-06-20 15:34:04.165  INFO 5764 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e9faa255-d8cc-3f58-9c10-41232f2266f7
+2019-06-20 15:34:04.187  INFO 5764 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$45f58cb0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:34:04.194  INFO 5764 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$620f8fad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:34:04.274  INFO 5764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-06-20 15:34:04.274  INFO 5764 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-20 15:34:04.275  INFO 5764 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-20 15:34:04.285  INFO 5764 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2019-06-20 15:34:04.285  INFO 5764 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 546 ms
+2019-06-20 15:34:04.381  INFO 5764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Starting...
+2019-06-20 15:34:04.383  INFO 5764 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Start completed.
+2019-06-20 15:34:04.390  INFO 5764 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-20 15:34:04.394  INFO 5764 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-20 15:34:04.672  INFO 5764 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:34:04.693  WARN 5764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-06-20 15:34:04.839  WARN 5764 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-06-20 15:34:04.890  INFO 5764 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-20 15:34:04.899  WARN 5764 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-20 15:34:04.899  INFO 5764 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-20 15:34:04.969  INFO 5764 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:34:05.087  INFO 5764 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-20 15:34:06.133  INFO 5764 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:34:07.140  INFO 5764 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:34:07.203  INFO 5764 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-06-20 15:34:07.206  INFO 5764 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-06-20 15:34:07.214  INFO 5764 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-06-20 15:34:07.214  INFO 5764 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-06-20 15:34:07.215  INFO 5764 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-06-20 15:34:07.215  INFO 5764 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-06-20 15:34:07.266  INFO 5764 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-20 15:34:07.267  INFO 5764 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-06-20 15:34:07.267  INFO 5764 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-06-20 15:34:07.267  INFO 5764 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-06-20 15:34:07.267  INFO 5764 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-06-20 15:34:07.267  INFO 5764 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-06-20 15:34:07.267  INFO 5764 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-06-20 15:34:07.267  INFO 5764 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-06-20 15:34:07.269  INFO 5764 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-06-20 15:34:07.270  INFO 5764 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-06-20 15:34:07.271  INFO 5764 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-06-20 15:34:07.271  INFO 5764 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1561025047271 with initial instances count: 2
+2019-06-20 15:34:07.273  INFO 5764 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTESERVICE with eureka with status UP
+2019-06-20 15:34:07.273  INFO 5764 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561025047273, current=UP, previous=STARTING]
+2019-06-20 15:34:07.273  INFO 5764 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:34:07.274  INFO 5764 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-06-20 15:34:07.275  INFO 5764 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-06-20 15:34:07.276  INFO 5764 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:34:07.282  INFO 5764 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-06-20 15:34:07.317  INFO 5764 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-06-20 15:34:07.318  INFO 5764 --- [scheduling-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-06-20 15:34:07.318  INFO 5764 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2019-06-20 15:34:07.318  INFO 5764 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : Started NoteServiceApplication in 5.763 seconds (JVM running for 17843.924)
+2019-06-20 15:34:07.326  INFO 5764 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-06-20 15:34:09.796  INFO 5764 --- [RMI TCP Connection(615)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-06-20 15:34:09.797  INFO 5764 --- [RMI TCP Connection(615)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTESERVICE with eureka with status DOWN
+2019-06-20 15:34:09.797  WARN 5764 --- [RMI TCP Connection(615)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561025049797, current=DOWN, previous=UP]
+2019-06-20 15:34:09.797  INFO 5764 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:34:09.799  INFO 5764 --- [RMI TCP Connection(615)-127.0.0.1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-20 15:34:09.800  INFO 5764 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:34:09.806  INFO 5764 --- [RMI TCP Connection(615)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:34:09.807  INFO 5764 --- [RMI TCP Connection(615)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:34:09.809  INFO 5764 --- [RMI TCP Connection(615)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-06-20 15:34:12.809  INFO 5764 --- [RMI TCP Connection(615)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-06-20 15:34:12.813  INFO 5764 --- [RMI TCP Connection(615)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - deregister  status: 200
+2019-06-20 15:34:12.825  INFO 5764 --- [RMI TCP Connection(615)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-06-20 15:34:12.825  INFO 5764 --- [RMI TCP Connection(615)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown initiated...
+2019-06-20 15:34:12.829  INFO 5764 --- [RMI TCP Connection(615)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown completed.
+2019-06-20 15:34:12.835  INFO 5764 --- [RMI TCP Connection(615)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-06-20 15:34:22.033  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : No active profile set, falling back to default profiles: default
+2019-06-20 15:34:23.699  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:34:23.699  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:34:23.813  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95ms. Found 2 repository interfaces.
+2019-06-20 15:34:23.822  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:34:23.823  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:34:23.859  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.LabelRepository.
+2019-06-20 15:34:23.860  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.NoteRepository.
+2019-06-20 15:34:23.860  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2019-06-20 15:34:24.308  INFO 1263 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e9faa255-d8cc-3f58-9c10-41232f2266f7
+2019-06-20 15:34:24.448  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3a65637b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:34:24.502  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$567f6678] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:34:25.546  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-06-20 15:34:25.618  INFO 1263 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-20 15:34:25.619  INFO 1263 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-20 15:34:25.799  INFO 1263 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-20 15:34:25.800  INFO 1263 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3696 ms
+2019-06-20 15:34:26.365  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-06-20 15:34:26.503  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-06-20 15:34:26.673  INFO 1263 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-20 15:34:26.829  INFO 1263 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-06-20 15:34:26.830  INFO 1263 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-06-20 15:34:27.338  INFO 1263 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-06-20 15:34:27.653  INFO 1263 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-20 15:34:29.991  INFO 1263 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:34:30.048  WARN 1263 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-06-20 15:34:30.779  WARN 1263 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-06-20 15:34:30.969  INFO 1263 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-20 15:34:31.004  WARN 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-20 15:34:31.004  INFO 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-20 15:34:31.020  WARN 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-20 15:34:31.020  INFO 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-20 15:34:31.203  INFO 1263 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:34:31.817  INFO 1263 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-20 15:34:32.921  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:34:33.959  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:34:34.261  INFO 1263 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-06-20 15:34:34.317  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-06-20 15:34:34.914  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-06-20 15:34:34.915  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-06-20 15:34:35.146  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-06-20 15:34:35.147  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-06-20 15:34:35.507  INFO 1263 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-20 15:34:35.523  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-06-20 15:34:35.524  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-06-20 15:34:35.524  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-06-20 15:34:35.524  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-06-20 15:34:35.524  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-06-20 15:34:35.524  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-06-20 15:34:35.524  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-06-20 15:34:35.746  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-06-20 15:34:35.768  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-06-20 15:34:35.770  INFO 1263 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-06-20 15:34:35.783  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1561025075772 with initial instances count: 1
+2019-06-20 15:34:35.786  INFO 1263 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTESERVICE with eureka with status UP
+2019-06-20 15:34:35.787  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561025075787, current=UP, previous=STARTING]
+2019-06-20 15:34:35.788  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:34:35.789  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-06-20 15:34:35.822  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:34:35.842  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-06-20 15:34:35.881  INFO 1263 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-06-20 15:34:36.108  INFO 1263 --- [scheduling-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-06-20 15:34:36.135  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-06-20 15:34:36.136  INFO 1263 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2019-06-20 15:34:36.219  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : Started NoteServiceApplication in 17.826 seconds (JVM running for 21.093)
+2019-06-20 15:36:01.431  INFO 1263 --- [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTESERVICE with eureka with status DOWN
+2019-06-20 15:36:01.432  WARN 1263 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561025161432, current=DOWN, previous=UP]
+2019-06-20 15:36:01.432  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:36:01.435  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:36:01.451  INFO 1263 --- [Thread-1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-20 15:36:01.455  INFO 1263 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:36:01.459  INFO 1263 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:36:01.462  INFO 1263 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-06-20 15:36:04.462  INFO 1263 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-06-20 15:36:04.466  INFO 1263 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - deregister  status: 200
+2019-06-20 15:36:04.475  INFO 1263 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-06-20 15:36:04.475  INFO 1263 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-06-20 15:36:04.480  INFO 1263 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-06-20 15:36:06.658  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : No active profile set, falling back to default profiles: default
+2019-06-20 15:36:06.932  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:36:06.932  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:36:06.940  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 2 repository interfaces.
+2019-06-20 15:36:06.942  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:36:06.943  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:36:06.944  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.LabelRepository.
+2019-06-20 15:36:06.945  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.NoteRepository.
+2019-06-20 15:36:06.945  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 repository interfaces.
+2019-06-20 15:36:06.990  INFO 1263 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e9faa255-d8cc-3f58-9c10-41232f2266f7
+2019-06-20 15:36:07.013  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3a65637b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:36:07.019  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$567f6678] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:36:07.098  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-06-20 15:36:07.099  INFO 1263 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-20 15:36:07.099  INFO 1263 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-20 15:36:07.110  INFO 1263 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-20 15:36:07.110  INFO 1263 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 451 ms
+2019-06-20 15:36:07.209  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-06-20 15:36:07.213  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-06-20 15:36:07.220  INFO 1263 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-20 15:36:07.225  INFO 1263 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-20 15:36:07.617  INFO 1263 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:36:07.647  WARN 1263 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-06-20 15:36:07.808  WARN 1263 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-06-20 15:36:07.865  INFO 1263 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-20 15:36:07.873  WARN 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-20 15:36:07.873  INFO 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-20 15:36:07.925  INFO 1263 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:36:08.043  INFO 1263 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-20 15:36:09.081  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:36:10.094  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:36:10.155  INFO 1263 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-06-20 15:36:10.158  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-06-20 15:36:10.160  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-06-20 15:36:10.160  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-06-20 15:36:10.160  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-06-20 15:36:10.160  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-06-20 15:36:10.205  INFO 1263 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-20 15:36:10.206  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-06-20 15:36:10.206  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-06-20 15:36:10.206  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-06-20 15:36:10.206  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-06-20 15:36:10.206  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-06-20 15:36:10.206  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-06-20 15:36:10.206  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-06-20 15:36:10.209  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-06-20 15:36:10.210  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-06-20 15:36:10.210  INFO 1263 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-06-20 15:36:10.211  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1561025170211 with initial instances count: 2
+2019-06-20 15:36:10.212  INFO 1263 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTESERVICE with eureka with status UP
+2019-06-20 15:36:10.213  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561025170213, current=UP, previous=STARTING]
+2019-06-20 15:36:10.213  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:36:10.214  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-06-20 15:36:10.216  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-06-20 15:36:10.217  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:36:10.224  INFO 1263 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-06-20 15:36:10.271  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-06-20 15:36:10.271  INFO 1263 --- [scheduling-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-06-20 15:36:10.271  INFO 1263 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2019-06-20 15:36:10.273  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : Started NoteServiceApplication in 5.68 seconds (JVM running for 115.147)
+2019-06-20 15:36:10.286  INFO 1263 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-06-20 15:36:56.561  INFO 1263 --- [Thread-10] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTESERVICE with eureka with status DOWN
+2019-06-20 15:36:56.561  WARN 1263 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561025216561, current=DOWN, previous=UP]
+2019-06-20 15:36:56.561  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:36:56.565  INFO 1263 --- [Thread-10] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-20 15:36:56.566  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:36:56.577  INFO 1263 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:36:56.578  INFO 1263 --- [Thread-10] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:36:56.581  INFO 1263 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-06-20 15:36:59.581  INFO 1263 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-06-20 15:36:59.585  INFO 1263 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - deregister  status: 200
+2019-06-20 15:36:59.590  INFO 1263 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-06-20 15:36:59.590  INFO 1263 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-06-20 15:36:59.596  INFO 1263 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-06-20 15:37:01.741  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : No active profile set, falling back to default profiles: default
+2019-06-20 15:37:02.000  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:37:02.000  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:37:02.010  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 2 repository interfaces.
+2019-06-20 15:37:02.012  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:37:02.012  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:37:02.014  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.LabelRepository.
+2019-06-20 15:37:02.014  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.NoteRepository.
+2019-06-20 15:37:02.014  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 repository interfaces.
+2019-06-20 15:37:02.064  INFO 1263 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e9faa255-d8cc-3f58-9c10-41232f2266f7
+2019-06-20 15:37:02.087  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3a65637b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:37:02.093  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$567f6678] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:37:02.174  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-06-20 15:37:02.175  INFO 1263 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-20 15:37:02.175  INFO 1263 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-20 15:37:02.187  INFO 1263 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-20 15:37:02.187  INFO 1263 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 445 ms
+2019-06-20 15:37:02.303  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2019-06-20 15:37:02.306  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2019-06-20 15:37:02.314  INFO 1263 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-20 15:37:02.320  INFO 1263 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-20 15:37:02.598  INFO 1263 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:37:02.622  WARN 1263 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-06-20 15:37:02.805  WARN 1263 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-06-20 15:37:02.860  INFO 1263 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-20 15:37:02.868  WARN 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-20 15:37:02.868  INFO 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-20 15:37:02.925  INFO 1263 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:37:03.061  INFO 1263 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-20 15:37:04.100  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:37:05.111  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:37:05.168  INFO 1263 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-06-20 15:37:05.171  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-06-20 15:37:05.172  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-06-20 15:37:05.173  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-06-20 15:37:05.173  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-06-20 15:37:05.173  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-06-20 15:37:05.209  INFO 1263 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-20 15:37:05.209  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-06-20 15:37:05.209  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-06-20 15:37:05.209  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-06-20 15:37:05.210  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-06-20 15:37:05.210  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-06-20 15:37:05.210  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-06-20 15:37:05.210  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-06-20 15:37:05.214  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-06-20 15:37:05.215  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-06-20 15:37:05.216  INFO 1263 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-06-20 15:37:05.216  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1561025225216 with initial instances count: 1
+2019-06-20 15:37:05.218  INFO 1263 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTESERVICE with eureka with status UP
+2019-06-20 15:37:05.218  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561025225218, current=UP, previous=STARTING]
+2019-06-20 15:37:05.218  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:37:05.219  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-06-20 15:37:05.221  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-06-20 15:37:05.223  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:37:05.227  INFO 1263 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-06-20 15:37:05.293  INFO 1263 --- [scheduling-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-06-20 15:37:05.316  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-06-20 15:37:05.316  INFO 1263 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2019-06-20 15:37:05.317  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : Started NoteServiceApplication in 5.637 seconds (JVM running for 170.191)
+2019-06-20 15:37:05.322  INFO 1263 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-06-20 15:37:41.564  INFO 1263 --- [Thread-19] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTESERVICE with eureka with status DOWN
+2019-06-20 15:37:41.565  WARN 1263 --- [Thread-19] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561025261565, current=DOWN, previous=UP]
+2019-06-20 15:37:41.565  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:37:41.569  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:37:41.569  INFO 1263 --- [Thread-19] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-20 15:37:41.575  INFO 1263 --- [Thread-19] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:37:41.576  INFO 1263 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:37:41.577  INFO 1263 --- [Thread-19] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-06-20 15:37:44.578  INFO 1263 --- [Thread-19] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-06-20 15:37:44.581  INFO 1263 --- [Thread-19] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - deregister  status: 200
+2019-06-20 15:37:44.594  INFO 1263 --- [Thread-19] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-06-20 15:37:44.594  INFO 1263 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2019-06-20 15:37:44.597  INFO 1263 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2019-06-20 15:37:46.750  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : No active profile set, falling back to default profiles: default
+2019-06-20 15:37:47.018  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:37:47.018  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:37:47.027  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 2 repository interfaces.
+2019-06-20 15:37:47.030  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:37:47.030  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:37:47.032  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.LabelRepository.
+2019-06-20 15:37:47.032  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.NoteRepository.
+2019-06-20 15:37:47.032  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 repository interfaces.
+2019-06-20 15:37:47.083  INFO 1263 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e9faa255-d8cc-3f58-9c10-41232f2266f7
+2019-06-20 15:37:47.107  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3a65637b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:37:47.114  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$567f6678] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:37:47.200  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-06-20 15:37:47.201  INFO 1263 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-20 15:37:47.201  INFO 1263 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-20 15:37:47.212  INFO 1263 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-20 15:37:47.213  INFO 1263 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 462 ms
+2019-06-20 15:37:47.315  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2019-06-20 15:37:47.318  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2019-06-20 15:37:47.326  INFO 1263 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-20 15:37:47.333  INFO 1263 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-20 15:37:47.629  INFO 1263 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:37:47.653  WARN 1263 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-06-20 15:37:47.847  WARN 1263 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-06-20 15:37:47.896  INFO 1263 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-20 15:37:47.904  WARN 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-20 15:37:47.904  INFO 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-20 15:37:47.954  INFO 1263 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:37:48.074  INFO 1263 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-20 15:37:49.111  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:37:50.123  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:37:50.179  INFO 1263 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-06-20 15:37:50.181  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-06-20 15:37:50.182  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-06-20 15:37:50.182  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-06-20 15:37:50.182  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-06-20 15:37:50.182  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-06-20 15:37:50.225  INFO 1263 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-20 15:37:50.226  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-06-20 15:37:50.226  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-06-20 15:37:50.226  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-06-20 15:37:50.226  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-06-20 15:37:50.226  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-06-20 15:37:50.226  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-06-20 15:37:50.226  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-06-20 15:37:50.229  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-06-20 15:37:50.231  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-06-20 15:37:50.232  INFO 1263 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-06-20 15:37:50.237  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1561025270237 with initial instances count: 2
+2019-06-20 15:37:50.239  INFO 1263 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTESERVICE with eureka with status UP
+2019-06-20 15:37:50.239  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561025270239, current=UP, previous=STARTING]
+2019-06-20 15:37:50.240  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-06-20 15:37:50.239  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:37:50.241  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-06-20 15:37:50.246  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:37:50.249  INFO 1263 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-06-20 15:37:50.298  INFO 1263 --- [scheduling-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-06-20 15:37:50.299  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-06-20 15:37:50.300  INFO 1263 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2019-06-20 15:37:50.302  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : Started NoteServiceApplication in 5.616 seconds (JVM running for 215.174)
+2019-06-20 15:37:50.306  INFO 1263 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-06-20 15:38:55.649  INFO 1263 --- [Thread-28] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTESERVICE with eureka with status DOWN
+2019-06-20 15:38:55.650  WARN 1263 --- [Thread-28] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561025335650, current=DOWN, previous=UP]
+2019-06-20 15:38:55.650  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:38:55.652  INFO 1263 --- [Thread-28] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-20 15:38:55.655  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:38:55.658  INFO 1263 --- [Thread-28] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:38:55.659  INFO 1263 --- [Thread-28] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:38:55.660  INFO 1263 --- [Thread-28] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-06-20 15:38:58.660  INFO 1263 --- [Thread-28] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-06-20 15:38:58.664  INFO 1263 --- [Thread-28] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - deregister  status: 200
+2019-06-20 15:38:58.669  INFO 1263 --- [Thread-28] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-06-20 15:38:58.669  INFO 1263 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2019-06-20 15:38:58.672  INFO 1263 --- [Thread-28] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2019-06-20 15:39:00.827  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : No active profile set, falling back to default profiles: default
+2019-06-20 15:39:01.090  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:39:01.091  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:39:01.098  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 2 repository interfaces.
+2019-06-20 15:39:01.100  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:39:01.100  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:39:01.102  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.LabelRepository.
+2019-06-20 15:39:01.102  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.NoteRepository.
+2019-06-20 15:39:01.102  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 repository interfaces.
+2019-06-20 15:39:01.142  INFO 1263 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e9faa255-d8cc-3f58-9c10-41232f2266f7
+2019-06-20 15:39:01.163  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3a65637b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:39:01.168  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$567f6678] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:39:01.269  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-06-20 15:39:01.270  INFO 1263 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-20 15:39:01.270  INFO 1263 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-20 15:39:01.282  INFO 1263 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-20 15:39:01.282  INFO 1263 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 454 ms
+2019-06-20 15:39:01.398  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2019-06-20 15:39:01.401  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2019-06-20 15:39:01.412  INFO 1263 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-20 15:39:01.418  INFO 1263 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-20 15:39:01.651  INFO 1263 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:39:01.681  WARN 1263 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-06-20 15:39:01.858  WARN 1263 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-06-20 15:39:01.923  INFO 1263 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-20 15:39:01.931  WARN 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-20 15:39:01.931  INFO 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-20 15:39:01.989  INFO 1263 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:39:02.115  INFO 1263 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-20 15:39:03.166  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:39:04.180  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:39:04.240  INFO 1263 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-06-20 15:39:04.242  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-06-20 15:39:04.243  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-06-20 15:39:04.243  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-06-20 15:39:04.243  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-06-20 15:39:04.243  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-06-20 15:39:04.278  INFO 1263 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-20 15:39:04.279  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-06-20 15:39:04.279  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-06-20 15:39:04.279  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-06-20 15:39:04.279  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-06-20 15:39:04.279  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-06-20 15:39:04.279  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-06-20 15:39:04.279  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-06-20 15:39:04.282  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-06-20 15:39:04.282  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-06-20 15:39:04.283  INFO 1263 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-06-20 15:39:04.284  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1561025344284 with initial instances count: 1
+2019-06-20 15:39:04.285  INFO 1263 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTESERVICE with eureka with status UP
+2019-06-20 15:39:04.285  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561025344285, current=UP, previous=STARTING]
+2019-06-20 15:39:04.286  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:39:04.287  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-06-20 15:39:04.288  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-06-20 15:39:04.293  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:39:04.295  INFO 1263 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-06-20 15:39:04.338  INFO 1263 --- [scheduling-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-06-20 15:39:04.339  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-06-20 15:39:04.340  INFO 1263 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2019-06-20 15:39:04.341  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : Started NoteServiceApplication in 5.57 seconds (JVM running for 289.215)
+2019-06-20 15:39:04.347  INFO 1263 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-06-20 15:39:50.643  INFO 1263 --- [Thread-37] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTESERVICE with eureka with status DOWN
+2019-06-20 15:39:50.643  WARN 1263 --- [Thread-37] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561025390643, current=DOWN, previous=UP]
+2019-06-20 15:39:50.643  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:39:50.646  INFO 1263 --- [Thread-37] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-20 15:39:50.647  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:39:50.657  INFO 1263 --- [Thread-37] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:39:50.658  INFO 1263 --- [Thread-37] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:39:50.659  INFO 1263 --- [Thread-37] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-06-20 15:39:53.660  INFO 1263 --- [Thread-37] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-06-20 15:39:53.663  INFO 1263 --- [Thread-37] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - deregister  status: 200
+2019-06-20 15:39:53.670  INFO 1263 --- [Thread-37] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-06-20 15:39:53.670  INFO 1263 --- [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2019-06-20 15:39:53.673  INFO 1263 --- [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2019-06-20 15:39:55.850  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : No active profile set, falling back to default profiles: default
+2019-06-20 15:39:56.120  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:39:56.120  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:39:56.127  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 2 repository interfaces.
+2019-06-20 15:39:56.129  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:39:56.129  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:39:56.131  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.LabelRepository.
+2019-06-20 15:39:56.131  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.NoteRepository.
+2019-06-20 15:39:56.131  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 repository interfaces.
+2019-06-20 15:39:56.171  INFO 1263 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e9faa255-d8cc-3f58-9c10-41232f2266f7
+2019-06-20 15:39:56.192  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3a65637b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:39:56.198  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$567f6678] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:39:56.280  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-06-20 15:39:56.281  INFO 1263 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-20 15:39:56.281  INFO 1263 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-20 15:39:56.297  INFO 1263 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-20 15:39:56.297  INFO 1263 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 445 ms
+2019-06-20 15:39:56.422  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2019-06-20 15:39:56.426  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2019-06-20 15:39:56.434  INFO 1263 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-20 15:39:56.438  INFO 1263 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-20 15:39:56.762  INFO 1263 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:39:56.784  WARN 1263 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-06-20 15:39:56.953  WARN 1263 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-06-20 15:39:57.007  INFO 1263 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-20 15:39:57.015  WARN 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-20 15:39:57.015  INFO 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-20 15:39:57.069  INFO 1263 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:39:57.207  INFO 1263 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-20 15:39:58.259  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:39:59.275  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:39:59.330  INFO 1263 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-06-20 15:39:59.333  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-06-20 15:39:59.333  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-06-20 15:39:59.334  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-06-20 15:39:59.334  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-06-20 15:39:59.334  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-06-20 15:39:59.377  INFO 1263 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-20 15:39:59.378  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-06-20 15:39:59.378  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-06-20 15:39:59.378  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-06-20 15:39:59.378  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-06-20 15:39:59.378  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-06-20 15:39:59.378  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-06-20 15:39:59.378  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-06-20 15:39:59.381  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-06-20 15:39:59.381  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-06-20 15:39:59.382  INFO 1263 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-06-20 15:39:59.382  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1561025399382 with initial instances count: 2
+2019-06-20 15:39:59.384  INFO 1263 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTESERVICE with eureka with status UP
+2019-06-20 15:39:59.384  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561025399384, current=UP, previous=STARTING]
+2019-06-20 15:39:59.384  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:39:59.385  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-06-20 15:39:59.387  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-06-20 15:39:59.393  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:39:59.393  INFO 1263 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-06-20 15:39:59.436  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-06-20 15:39:59.436  INFO 1263 --- [scheduling-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-06-20 15:39:59.437  INFO 1263 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2019-06-20 15:39:59.442  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : Started NoteServiceApplication in 5.652 seconds (JVM running for 344.316)
+2019-06-20 15:39:59.446  INFO 1263 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-06-20 15:44:59.379  INFO 1263 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-20 15:49:59.380  INFO 1263 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-20 15:52:02.417  INFO 1263 --- [Thread-46] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTESERVICE with eureka with status DOWN
+2019-06-20 15:52:02.418  WARN 1263 --- [Thread-46] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561026122418, current=DOWN, previous=UP]
+2019-06-20 15:52:02.418  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:52:02.422  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:52:02.423  INFO 1263 --- [Thread-46] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-20 15:52:02.432  INFO 1263 --- [Thread-46] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:52:02.433  INFO 1263 --- [Thread-46] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:52:02.434  INFO 1263 --- [Thread-46] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-06-20 15:52:05.435  INFO 1263 --- [Thread-46] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-06-20 15:52:05.440  INFO 1263 --- [Thread-46] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - deregister  status: 200
+2019-06-20 15:52:05.444  INFO 1263 --- [Thread-46] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-06-20 15:52:05.445  INFO 1263 --- [Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2019-06-20 15:52:05.447  INFO 1263 --- [Thread-46] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2019-06-20 15:52:07.619  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : No active profile set, falling back to default profiles: default
+2019-06-20 15:52:07.881  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:52:07.881  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:52:07.889  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 2 repository interfaces.
+2019-06-20 15:52:07.891  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:52:07.891  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:52:07.892  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.LabelRepository.
+2019-06-20 15:52:07.893  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.NoteRepository.
+2019-06-20 15:52:07.893  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 repository interfaces.
+2019-06-20 15:52:07.933  INFO 1263 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e9faa255-d8cc-3f58-9c10-41232f2266f7
+2019-06-20 15:52:07.954  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3a65637b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:52:07.960  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$567f6678] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:52:08.059  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-06-20 15:52:08.059  INFO 1263 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-20 15:52:08.060  INFO 1263 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-20 15:52:08.071  INFO 1263 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-20 15:52:08.071  INFO 1263 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 451 ms
+2019-06-20 15:52:08.194  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2019-06-20 15:52:08.196  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2019-06-20 15:52:08.208  INFO 1263 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-20 15:52:08.213  INFO 1263 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-20 15:52:08.461  INFO 1263 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:52:08.483  WARN 1263 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-06-20 15:52:08.654  WARN 1263 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-06-20 15:52:08.707  INFO 1263 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-20 15:52:08.715  WARN 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-20 15:52:08.715  INFO 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-20 15:52:08.768  INFO 1263 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:52:08.908  INFO 1263 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-20 15:52:09.953  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:52:10.963  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:52:11.018  INFO 1263 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-06-20 15:52:11.021  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-06-20 15:52:11.021  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-06-20 15:52:11.021  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-06-20 15:52:11.021  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-06-20 15:52:11.022  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-06-20 15:52:11.066  INFO 1263 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-20 15:52:11.067  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-06-20 15:52:11.067  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-06-20 15:52:11.067  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-06-20 15:52:11.067  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-06-20 15:52:11.067  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-06-20 15:52:11.067  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-06-20 15:52:11.067  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-06-20 15:52:11.069  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-06-20 15:52:11.070  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-06-20 15:52:11.071  INFO 1263 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-06-20 15:52:11.071  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1561026131071 with initial instances count: 2
+2019-06-20 15:52:11.073  INFO 1263 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTESERVICE with eureka with status UP
+2019-06-20 15:52:11.073  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561026131073, current=UP, previous=STARTING]
+2019-06-20 15:52:11.073  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:52:11.074  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-06-20 15:52:11.075  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-06-20 15:52:11.078  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:52:11.081  INFO 1263 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-06-20 15:52:11.119  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-06-20 15:52:11.119  INFO 1263 --- [scheduling-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-06-20 15:52:11.121  INFO 1263 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2019-06-20 15:52:11.122  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : Started NoteServiceApplication in 5.56 seconds (JVM running for 1075.995)
+2019-06-20 15:52:11.125  INFO 1263 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-06-20 15:53:08.459  INFO 1263 --- [Thread-55] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTESERVICE with eureka with status DOWN
+2019-06-20 15:53:08.460  WARN 1263 --- [Thread-55] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561026188460, current=DOWN, previous=UP]
+2019-06-20 15:53:08.460  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:53:08.463  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:53:08.463  INFO 1263 --- [Thread-55] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-20 15:53:08.470  INFO 1263 --- [Thread-55] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:53:08.471  INFO 1263 --- [Thread-55] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:53:08.472  INFO 1263 --- [Thread-55] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-06-20 15:53:11.472  INFO 1263 --- [Thread-55] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-06-20 15:53:11.472  WARN 1263 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2019-06-20 15:53:11.475  INFO 1263 --- [Thread-55] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - deregister  status: 200
+2019-06-20 15:53:11.481  INFO 1263 --- [Thread-55] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-06-20 15:53:11.481  INFO 1263 --- [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2019-06-20 15:53:11.484  INFO 1263 --- [Thread-55] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2019-06-20 15:53:13.673  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : No active profile set, falling back to default profiles: default
+2019-06-20 15:53:13.938  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:53:13.938  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:53:13.945  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 2 repository interfaces.
+2019-06-20 15:53:13.947  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:53:13.947  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:53:13.949  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.LabelRepository.
+2019-06-20 15:53:13.949  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.NoteRepository.
+2019-06-20 15:53:13.949  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 repository interfaces.
+2019-06-20 15:53:13.994  INFO 1263 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e9faa255-d8cc-3f58-9c10-41232f2266f7
+2019-06-20 15:53:14.016  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3a65637b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:53:14.022  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$567f6678] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:53:14.129  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-06-20 15:53:14.130  INFO 1263 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-20 15:53:14.130  INFO 1263 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-20 15:53:14.142  INFO 1263 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-20 15:53:14.142  INFO 1263 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 468 ms
+2019-06-20 15:53:14.256  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2019-06-20 15:53:14.258  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2019-06-20 15:53:14.265  INFO 1263 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-20 15:53:14.271  INFO 1263 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-20 15:53:14.580  INFO 1263 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:53:14.600  WARN 1263 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-06-20 15:53:14.765  WARN 1263 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-06-20 15:53:14.818  INFO 1263 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-20 15:53:14.827  WARN 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-20 15:53:14.827  INFO 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-20 15:53:14.878  INFO 1263 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:53:15.009  INFO 1263 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-20 15:53:16.065  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:53:17.079  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:53:17.142  INFO 1263 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-06-20 15:53:17.144  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-06-20 15:53:17.145  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-06-20 15:53:17.145  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-06-20 15:53:17.145  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-06-20 15:53:17.145  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-06-20 15:53:17.182  INFO 1263 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-20 15:53:17.183  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-06-20 15:53:17.183  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-06-20 15:53:17.183  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-06-20 15:53:17.183  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-06-20 15:53:17.183  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-06-20 15:53:17.183  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-06-20 15:53:17.183  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-06-20 15:53:17.185  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-06-20 15:53:17.186  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-06-20 15:53:17.186  INFO 1263 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-06-20 15:53:17.187  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1561026197187 with initial instances count: 2
+2019-06-20 15:53:17.188  INFO 1263 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTESERVICE with eureka with status UP
+2019-06-20 15:53:17.188  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561026197188, current=UP, previous=STARTING]
+2019-06-20 15:53:17.189  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:53:17.190  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-06-20 15:53:17.191  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-06-20 15:53:17.193  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:53:17.197  INFO 1263 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-06-20 15:53:17.235  INFO 1263 --- [scheduling-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-06-20 15:53:17.258  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-06-20 15:53:17.259  INFO 1263 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2019-06-20 15:53:17.260  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : Started NoteServiceApplication in 5.649 seconds (JVM running for 1142.134)
+2019-06-20 15:53:17.268  INFO 1263 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-06-20 15:53:36.472  INFO 1263 --- [Thread-64] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTESERVICE with eureka with status DOWN
+2019-06-20 15:53:36.473  WARN 1263 --- [Thread-64] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561026216473, current=DOWN, previous=UP]
+2019-06-20 15:53:36.473  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:53:36.476  INFO 1263 --- [Thread-64] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-20 15:53:36.482  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:53:36.482  INFO 1263 --- [Thread-64] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:53:36.483  INFO 1263 --- [Thread-64] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:53:36.485  INFO 1263 --- [Thread-64] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-06-20 15:53:39.485  INFO 1263 --- [Thread-64] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-06-20 15:53:39.488  INFO 1263 --- [Thread-64] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - deregister  status: 200
+2019-06-20 15:53:39.493  INFO 1263 --- [Thread-64] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-06-20 15:53:39.494  INFO 1263 --- [Thread-64] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2019-06-20 15:53:39.499  INFO 1263 --- [Thread-64] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2019-06-20 15:53:41.686  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : No active profile set, falling back to default profiles: default
+2019-06-20 15:53:41.951  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:53:41.951  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:53:41.958  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7ms. Found 2 repository interfaces.
+2019-06-20 15:53:41.960  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:53:41.960  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:53:41.961  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.LabelRepository.
+2019-06-20 15:53:41.961  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.NoteRepository.
+2019-06-20 15:53:41.961  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1ms. Found 0 repository interfaces.
+2019-06-20 15:53:42.001  INFO 1263 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e9faa255-d8cc-3f58-9c10-41232f2266f7
+2019-06-20 15:53:42.022  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3a65637b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:53:42.029  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$567f6678] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:53:42.113  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-06-20 15:53:42.114  INFO 1263 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-20 15:53:42.114  INFO 1263 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-20 15:53:42.125  INFO 1263 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-20 15:53:42.125  INFO 1263 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 438 ms
+2019-06-20 15:53:42.241  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2019-06-20 15:53:42.243  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2019-06-20 15:53:42.250  INFO 1263 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-20 15:53:42.255  INFO 1263 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-20 15:53:42.509  INFO 1263 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:53:42.534  WARN 1263 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-06-20 15:53:42.690  WARN 1263 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-06-20 15:53:42.747  INFO 1263 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-20 15:53:42.755  WARN 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-20 15:53:42.755  INFO 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-20 15:53:42.811  INFO 1263 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:53:42.947  INFO 1263 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-20 15:53:43.983  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:53:44.998  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:53:45.058  INFO 1263 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-06-20 15:53:45.060  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-06-20 15:53:45.061  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-06-20 15:53:45.061  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-06-20 15:53:45.061  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-06-20 15:53:45.061  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-06-20 15:53:45.095  INFO 1263 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-20 15:53:45.096  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-06-20 15:53:45.096  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-06-20 15:53:45.096  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-06-20 15:53:45.096  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-06-20 15:53:45.096  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-06-20 15:53:45.096  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-06-20 15:53:45.096  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-06-20 15:53:45.099  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-06-20 15:53:45.099  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-06-20 15:53:45.099  INFO 1263 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-06-20 15:53:45.100  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1561026225100 with initial instances count: 2
+2019-06-20 15:53:45.101  INFO 1263 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTESERVICE with eureka with status UP
+2019-06-20 15:53:45.101  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561026225101, current=UP, previous=STARTING]
+2019-06-20 15:53:45.102  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:53:45.103  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-06-20 15:53:45.104  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-06-20 15:53:45.106  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:53:45.110  INFO 1263 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-06-20 15:53:45.157  INFO 1263 --- [scheduling-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-06-20 15:53:45.162  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-06-20 15:53:45.162  INFO 1263 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2019-06-20 15:53:45.167  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : Started NoteServiceApplication in 5.543 seconds (JVM running for 1170.041)
+2019-06-20 15:53:45.171  INFO 1263 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-06-20 15:56:15.732  INFO 1263 --- [Thread-73] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application NOTESERVICE with eureka with status DOWN
+2019-06-20 15:56:15.733  WARN 1263 --- [Thread-73] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561026375733, current=DOWN, previous=UP]
+2019-06-20 15:56:15.733  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:56:15.736  INFO 1263 --- [Thread-73] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2019-06-20 15:56:15.736  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:56:15.743  INFO 1263 --- [Thread-73] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:56:15.744  INFO 1263 --- [Thread-73] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:56:15.745  INFO 1263 --- [Thread-73] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-06-20 15:56:18.746  INFO 1263 --- [Thread-73] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-06-20 15:56:18.750  INFO 1263 --- [Thread-73] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - deregister  status: 200
+2019-06-20 15:56:18.755  INFO 1263 --- [Thread-73] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-06-20 15:56:18.755  INFO 1263 --- [Thread-73] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2019-06-20 15:56:18.761  INFO 1263 --- [Thread-73] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2019-06-20 15:56:20.974  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : No active profile set, falling back to default profiles: default
+2019-06-20 15:56:21.280  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:56:21.280  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:56:21.289  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 2 repository interfaces.
+2019-06-20 15:56:21.291  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-06-20 15:56:21.292  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-06-20 15:56:21.293  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.LabelRepository.
+2019-06-20 15:56:21.293  INFO 1263 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bridgelabz.note.repository.NoteRepository.
+2019-06-20 15:56:21.293  INFO 1263 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1ms. Found 0 repository interfaces.
+2019-06-20 15:56:21.341  INFO 1263 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e9faa255-d8cc-3f58-9c10-41232f2266f7
+2019-06-20 15:56:21.366  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3a65637b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:56:21.373  INFO 1263 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$567f6678] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-06-20 15:56:21.480  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2019-06-20 15:56:21.481  INFO 1263 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-20 15:56:21.481  INFO 1263 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-06-20 15:56:21.494  INFO 1263 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-20 15:56:21.494  INFO 1263 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 519 ms
+2019-06-20 15:56:21.662  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2019-06-20 15:56:21.665  INFO 1263 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2019-06-20 15:56:21.674  INFO 1263 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-06-20 15:56:21.681  INFO 1263 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-06-20 15:56:22.016  INFO 1263 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-06-20 15:56:22.044  WARN 1263 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2019-06-20 15:56:22.203  WARN 1263 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-06-20 15:56:22.250  INFO 1263 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-06-20 15:56:22.258  WARN 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-06-20 15:56:22.258  INFO 1263 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-06-20 15:56:22.320  INFO 1263 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-06-20 15:56:22.475  INFO 1263 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-06-20 15:56:23.516  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:56:24.526  INFO 1263 --- [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-06-20 15:56:25.489  INFO 1263 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-06-20 15:56:25.491  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-06-20 15:56:25.492  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-06-20 15:56:25.492  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-06-20 15:56:25.492  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-06-20 15:56:25.492  INFO 1263 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-06-20 15:56:25.535  INFO 1263 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-06-20 15:56:25.536  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-06-20 15:56:25.536  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-06-20 15:56:25.536  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-06-20 15:56:25.536  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-06-20 15:56:25.536  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-06-20 15:56:25.536  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-06-20 15:56:25.536  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-06-20 15:56:25.538  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-06-20 15:56:25.539  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-06-20 15:56:25.539  INFO 1263 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-06-20 15:56:25.540  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1561026385540 with initial instances count: 2
+2019-06-20 15:56:25.541  INFO 1263 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application NOTESERVICE with eureka with status UP
+2019-06-20 15:56:25.541  INFO 1263 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1561026385541, current=UP, previous=STARTING]
+2019-06-20 15:56:25.542  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082: registering service...
+2019-06-20 15:56:25.543  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-06-20 15:56:25.545  INFO 1263 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-06-20 15:56:25.546  INFO 1263 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_NOTESERVICE/localhost:noteservice:8082 - registration status: 204
+2019-06-20 15:56:25.551  INFO 1263 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-06-20 15:56:25.591  INFO 1263 --- [scheduling-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-06-20 15:56:25.593  INFO 1263 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2019-06-20 15:56:25.594  INFO 1263 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2019-06-20 15:56:25.601  INFO 1263 --- [restartedMain] com.bridgelabz.NoteServiceApplication    : Started NoteServiceApplication in 6.69 seconds (JVM running for 1330.475)
+2019-06-20 15:56:25.609  INFO 1263 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
